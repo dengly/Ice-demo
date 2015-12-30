@@ -1,0 +1,36 @@
+#Mac File System
+.DS_Store
+._.DS_Store
+
+*.class
+target/*
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+# Package Files #
+*.jar
+*.war
+*.ear
+
+android/IceClient/bin/*
+android/IceClient/gen/*
+
+# Xcode
+*.xcuserstate
+*/build/*
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+profile
+*.moved-aside
+DerivedData
+.idea/
+*.hmap
+
+#CocoaPods
+Pods

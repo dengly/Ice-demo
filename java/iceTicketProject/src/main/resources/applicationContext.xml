@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	<context:annotation-config />
+	<!-- 使用annotation自动注册bean，并检查@Required，@Autowired的属性已被注入 -->
+	<context:component-scan base-package="com.zzwtec.iceTicketProject.spring">
+	</context:component-scan>
+	<!-- properties -->
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="classpath:ticketsystem.properties" />
+	</bean>
+	<!-- 配置数据库连接 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="${jdbc_url}" />
+		<property name="username" value="${jdbc_user}" />
+		<property name="password" value="${jdbc_password}" />
+		<!-- 最大连接数 -->
+		<property name="maxActive" value="${jdbc_maxActive}" />
+		<!-- 最小空闲数 -->
+		<property name="minIdle" value="${jdbc_minIdle}" />
+		<!-- 初始化连接数 -->
+		<property name="initialSize" value="${jdbc_minIdle}" />
+		<!-- 是否自动回收超时连接的时候打印连接的超时错误 -->
+		<property name="logAbandoned" value="true" />
+		<!-- 是否自动回收超时连接 -->
+		<property name="removeAbandoned" value="true" />
+		<!-- 超时时间（单位秒） -->
+		<property name="removeAbandonedTimeout" value="600" />
+		<!-- 超时等待时间（单位毫秒） -->
+		<property name="maxWait" value="10000" />
+		<!-- 心跳检测 -->
+		<property name="testOnBorrow" value="false" />
+		<property name="testWhileIdle" value="true" />
+		<property name="validationQuery" value="SELECT 1" />
+		<!-- <property name="validationQueryTimeout" value="3" /> -->
+		<!-- 连接空闲时候对空闲连接定期检查，无效对连接被剔除，保证连接对有效性，单位毫秒 -->
+		<property name="timeBetweenEvictionRunsMillis" value="30000" />
+		<!-- 当空闲连接未使用的时间超过此值以后，空闲连接被关闭，并重新建立空闲连接 -->
+		<property name="minEvictableIdleTimeMillis" value="900000" />
+		<!-- 一次扫描检查的连接数量 -->
+		<property name="numTestsPerEvictionRun" value="5" />
+	</bean>
+	
+	<!-- 配置hibernate相关信息 -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+		<!-- 以下列表写入实体类 -->
+		<property name="annotatedClasses">
+			<list>
+				<value>com.zzwtec.iceTicketProject.db.TBOrder</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<!-- 使用annotation定义事务 -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+</beans>

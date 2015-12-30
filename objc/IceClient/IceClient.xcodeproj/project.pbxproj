@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		48CF6ABF1C30EBD900D19387 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CF6ABE1C30EBD900D19387 /* main.m */; };
+		48CF6AC21C30EBD900D19387 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CF6AC11C30EBD900D19387 /* AppDelegate.m */; };
+		48CF6AC51C30EBD900D19387 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CF6AC41C30EBD900D19387 /* ViewController.m */; };
+		48CF6AC81C30EBD900D19387 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48CF6AC61C30EBD900D19387 /* Main.storyboard */; };
+		48CF6ACA1C30EBD900D19387 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48CF6AC91C30EBD900D19387 /* Assets.xcassets */; };
+		48CF6ACD1C30EBD900D19387 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48CF6ACB1C30EBD900D19387 /* LaunchScreen.storyboard */; };
+		48CF6AD81C30EBD900D19387 /* IceClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CF6AD71C30EBD900D19387 /* IceClientTests.m */; };
+		48CF6AE31C30EBD900D19387 /* IceClientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CF6AE21C30EBD900D19387 /* IceClientUITests.m */; };
+		48CF6AFB1C30ECFA00D19387 /* ca.cer in Resources */ = {isa = PBXBuildFile; fileRef = 48CF6AF01C30ECFA00D19387 /* ca.cer */; };
+		48CF6AFC1C30ECFA00D19387 /* client.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 48CF6AF11C30ECFA00D19387 /* client.p12 */; };
+		48CF6AFD1C30ECFA00D19387 /* glacier2_config.client in Resources */ = {isa = PBXBuildFile; fileRef = 48CF6AF21C30ECFA00D19387 /* glacier2_config.client */; };
+		48CF6AFE1C30ECFA00D19387 /* iceClient.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48CF6AF31C30ECFA00D19387 /* iceClient.plist */; };
+		48CF6AFF1C30ECFA00D19387 /* IceClientUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CF6AF51C30ECFA00D19387 /* IceClientUtil.m */; };
+		48CF6B001C30ECFA00D19387 /* IceGlacier2Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CF6AF71C30ECFA00D19387 /* IceGlacier2Util.m */; };
+		48CF6B011C30ECFA00D19387 /* ticket.ice in Sources */ = {isa = PBXBuildFile; fileRef = 48CF6AF91C30ECFA00D19387 /* ticket.ice */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		48CF6AD41C30EBD900D19387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48CF6AB21C30EBD900D19387 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48CF6AB91C30EBD900D19387;
+			remoteInfo = IceClient;
+		};
+		48CF6ADF1C30EBD900D19387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48CF6AB21C30EBD900D19387 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48CF6AB91C30EBD900D19387;
+			remoteInfo = IceClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		48CF6ABA1C30EBD900D19387 /* IceClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IceClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		48CF6ABE1C30EBD900D19387 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		48CF6AC01C30EBD900D19387 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		48CF6AC11C30EBD900D19387 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		48CF6AC31C30EBD900D19387 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		48CF6AC41C30EBD900D19387 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		48CF6AC71C30EBD900D19387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		48CF6AC91C30EBD900D19387 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		48CF6ACC1C30EBD900D19387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		48CF6ACE1C30EBD900D19387 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48CF6AD31C30EBD900D19387 /* IceClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IceClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		48CF6AD71C30EBD900D19387 /* IceClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IceClientTests.m; sourceTree = "<group>"; };
+		48CF6AD91C30EBD900D19387 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48CF6ADE1C30EBD900D19387 /* IceClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IceClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		48CF6AE21C30EBD900D19387 /* IceClientUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IceClientUITests.m; sourceTree = "<group>"; };
+		48CF6AE41C30EBD900D19387 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48CF6AF01C30ECFA00D19387 /* ca.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = ca.cer; sourceTree = "<group>"; };
+		48CF6AF11C30ECFA00D19387 /* client.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = client.p12; sourceTree = "<group>"; };
+		48CF6AF21C30ECFA00D19387 /* glacier2_config.client */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = glacier2_config.client; sourceTree = "<group>"; };
+		48CF6AF31C30ECFA00D19387 /* iceClient.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = iceClient.plist; sourceTree = "<group>"; };
+		48CF6AF41C30ECFA00D19387 /* IceClientUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IceClientUtil.h; sourceTree = "<group>"; };
+		48CF6AF51C30ECFA00D19387 /* IceClientUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IceClientUtil.m; sourceTree = "<group>"; };
+		48CF6AF61C30ECFA00D19387 /* IceGlacier2Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IceGlacier2Util.h; sourceTree = "<group>"; };
+		48CF6AF71C30ECFA00D19387 /* IceGlacier2Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IceGlacier2Util.m; sourceTree = "<group>"; };
+		48CF6AF91C30ECFA00D19387 /* ticket.ice */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.slice; path = ticket.ice; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48CF6AB71C30EBD900D19387 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48CF6AD01C30EBD900D19387 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48CF6ADB1C30EBD900D19387 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		48CF6AB11C30EBD900D19387 = {
+			isa = PBXGroup;
+			children = (
+				48CF6ABC1C30EBD900D19387 /* IceClient */,
+				48CF6AD61C30EBD900D19387 /* IceClientTests */,
+				48CF6AE11C30EBD900D19387 /* IceClientUITests */,
+				48CF6ABB1C30EBD900D19387 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		48CF6ABB1C30EBD900D19387 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48CF6ABA1C30EBD900D19387 /* IceClient.app */,
+				48CF6AD31C30EBD900D19387 /* IceClientTests.xctest */,
+				48CF6ADE1C30EBD900D19387 /* IceClientUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48CF6ABC1C30EBD900D19387 /* IceClient */ = {
+			isa = PBXGroup;
+			children = (
+				48CF6AF01C30ECFA00D19387 /* ca.cer */,
+				48CF6AF11C30ECFA00D19387 /* client.p12 */,
+				48CF6AF21C30ECFA00D19387 /* glacier2_config.client */,
+				48CF6AF31C30ECFA00D19387 /* iceClient.plist */,
+				48CF6AF41C30ECFA00D19387 /* IceClientUtil.h */,
+				48CF6AF51C30ECFA00D19387 /* IceClientUtil.m */,
+				48CF6AF61C30ECFA00D19387 /* IceGlacier2Util.h */,
+				48CF6AF71C30ECFA00D19387 /* IceGlacier2Util.m */,
+				48CF6AF81C30ECFA00D19387 /* slice */,
+				48CF6AC01C30EBD900D19387 /* AppDelegate.h */,
+				48CF6AC11C30EBD900D19387 /* AppDelegate.m */,
+				48CF6AC31C30EBD900D19387 /* ViewController.h */,
+				48CF6AC41C30EBD900D19387 /* ViewController.m */,
+				48CF6AC61C30EBD900D19387 /* Main.storyboard */,
+				48CF6AC91C30EBD900D19387 /* Assets.xcassets */,
+				48CF6ACB1C30EBD900D19387 /* LaunchScreen.storyboard */,
+				48CF6ACE1C30EBD900D19387 /* Info.plist */,
+				48CF6ABD1C30EBD900D19387 /* Supporting Files */,
+			);
+			path = IceClient;
+			sourceTree = "<group>";
+		};
+		48CF6ABD1C30EBD900D19387 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				48CF6ABE1C30EBD900D19387 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		48CF6AD61C30EBD900D19387 /* IceClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				48CF6AD71C30EBD900D19387 /* IceClientTests.m */,
+				48CF6AD91C30EBD900D19387 /* Info.plist */,
+			);
+			path = IceClientTests;
+			sourceTree = "<group>";
+		};
+		48CF6AE11C30EBD900D19387 /* IceClientUITests */ = {
+			isa = PBXGroup;
+			children = (
+				48CF6AE21C30EBD900D19387 /* IceClientUITests.m */,
+				48CF6AE41C30EBD900D19387 /* Info.plist */,
+			);
+			path = IceClientUITests;
+			sourceTree = "<group>";
+		};
+		48CF6AF81C30ECFA00D19387 /* slice */ = {
+			isa = PBXGroup;
+			children = (
+				48CF6AF91C30ECFA00D19387 /* ticket.ice */,
+			);
+			path = slice;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		48CF6AB91C30EBD900D19387 /* IceClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48CF6AE71C30EBD900D19387 /* Build configuration list for PBXNativeTarget "IceClient" */;
+			buildPhases = (
+				48CF6AB61C30EBD900D19387 /* Sources */,
+				48CF6AB71C30EBD900D19387 /* Frameworks */,
+				48CF6AB81C30EBD900D19387 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IceClient;
+			productName = IceClient;
+			productReference = 48CF6ABA1C30EBD900D19387 /* IceClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		48CF6AD21C30EBD900D19387 /* IceClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48CF6AEA1C30EBD900D19387 /* Build configuration list for PBXNativeTarget "IceClientTests" */;
+			buildPhases = (
+				48CF6ACF1C30EBD900D19387 /* Sources */,
+				48CF6AD01C30EBD900D19387 /* Frameworks */,
+				48CF6AD11C30EBD900D19387 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48CF6AD51C30EBD900D19387 /* PBXTargetDependency */,
+			);
+			name = IceClientTests;
+			productName = IceClientTests;
+			productReference = 48CF6AD31C30EBD900D19387 /* IceClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		48CF6ADD1C30EBD900D19387 /* IceClientUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48CF6AED1C30EBD900D19387 /* Build configuration list for PBXNativeTarget "IceClientUITests" */;
+			buildPhases = (
+				48CF6ADA1C30EBD900D19387 /* Sources */,
+				48CF6ADB1C30EBD900D19387 /* Frameworks */,
+				48CF6ADC1C30EBD900D19387 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48CF6AE01C30EBD900D19387 /* PBXTargetDependency */,
+			);
+			name = IceClientUITests;
+			productName = IceClientUITests;
+			productReference = 48CF6ADE1C30EBD900D19387 /* IceClientUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		48CF6AB21C30EBD900D19387 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "邓燎燕";
+				TargetAttributes = {
+					48CF6AB91C30EBD900D19387 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					48CF6AD21C30EBD900D19387 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 48CF6AB91C30EBD900D19387;
+					};
+					48CF6ADD1C30EBD900D19387 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 48CF6AB91C30EBD900D19387;
+					};
+				};
+			};
+			buildConfigurationList = 48CF6AB51C30EBD900D19387 /* Build configuration list for PBXProject "IceClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 48CF6AB11C30EBD900D19387;
+			productRefGroup = 48CF6ABB1C30EBD900D19387 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48CF6AB91C30EBD900D19387 /* IceClient */,
+				48CF6AD21C30EBD900D19387 /* IceClientTests */,
+				48CF6ADD1C30EBD900D19387 /* IceClientUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48CF6AB81C30EBD900D19387 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48CF6ACD1C30EBD900D19387 /* LaunchScreen.storyboard in Resources */,
+				48CF6ACA1C30EBD900D19387 /* Assets.xcassets in Resources */,
+				48CF6AFB1C30ECFA00D19387 /* ca.cer in Resources */,
+				48CF6AC81C30EBD900D19387 /* Main.storyboard in Resources */,
+				48CF6AFC1C30ECFA00D19387 /* client.p12 in Resources */,
+				48CF6AFD1C30ECFA00D19387 /* glacier2_config.client in Resources */,
+				48CF6AFE1C30ECFA00D19387 /* iceClient.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48CF6AD11C30EBD900D19387 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48CF6ADC1C30EBD900D19387 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		48CF6AB61C30EBD900D19387 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48CF6AFF1C30ECFA00D19387 /* IceClientUtil.m in Sources */,
+				48CF6AC51C30EBD900D19387 /* ViewController.m in Sources */,
+				48CF6AC21C30EBD900D19387 /* AppDelegate.m in Sources */,
+				48CF6B001C30ECFA00D19387 /* IceGlacier2Util.m in Sources */,
+				48CF6ABF1C30EBD900D19387 /* main.m in Sources */,
+				48CF6B011C30ECFA00D19387 /* ticket.ice in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48CF6ACF1C30EBD900D19387 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48CF6AD81C30EBD900D19387 /* IceClientTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48CF6ADA1C30EBD900D19387 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48CF6AE31C30EBD900D19387 /* IceClientUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		48CF6AD51C30EBD900D19387 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48CF6AB91C30EBD900D19387 /* IceClient */;
+			targetProxy = 48CF6AD41C30EBD900D19387 /* PBXContainerItemProxy */;
+		};
+		48CF6AE01C30EBD900D19387 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48CF6AB91C30EBD900D19387 /* IceClient */;
+			targetProxy = 48CF6ADF1C30EBD900D19387 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		48CF6AC61C30EBD900D19387 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48CF6AC71C30EBD900D19387 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		48CF6ACB1C30EBD900D19387 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48CF6ACC1C30EBD900D19387 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		48CF6AE51C30EBD900D19387 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		48CF6AE61C30EBD900D19387 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		48CF6AE81C30EBD900D19387 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = "/usr/local/Cellar/icetouch36/3.6.1/lib/IceTouch/ObjC/$(PLATFORM_NAME).sdk";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = IceClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zzwtec.IceClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SLICE_ICE_HOME = /Users/dengliaoyan/Documents/Work/Workspaces/Zeroc_Ice_Workspace/ice;
+			};
+			name = Debug;
+		};
+		48CF6AE91C30EBD900D19387 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = "/usr/local/Cellar/icetouch36/3.6.1/lib/IceTouch/ObjC/$(PLATFORM_NAME).sdk";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = IceClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zzwtec.IceClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SLICE_ICE_HOME = /Users/dengliaoyan/Documents/Work/Workspaces/Zeroc_Ice_Workspace/ice;
+			};
+			name = Release;
+		};
+		48CF6AEB1C30EBD900D19387 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = IceClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zzwtec.IceClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IceClient.app/IceClient";
+			};
+			name = Debug;
+		};
+		48CF6AEC1C30EBD900D19387 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = IceClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zzwtec.IceClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IceClient.app/IceClient";
+			};
+			name = Release;
+		};
+		48CF6AEE1C30EBD900D19387 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = IceClientUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zzwtec.IceClientUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = IceClient;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		48CF6AEF1C30EBD900D19387 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = IceClientUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zzwtec.IceClientUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = IceClient;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48CF6AB51C30EBD900D19387 /* Build configuration list for PBXProject "IceClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48CF6AE51C30EBD900D19387 /* Debug */,
+				48CF6AE61C30EBD900D19387 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48CF6AE71C30EBD900D19387 /* Build configuration list for PBXNativeTarget "IceClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48CF6AE81C30EBD900D19387 /* Debug */,
+				48CF6AE91C30EBD900D19387 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		48CF6AEA1C30EBD900D19387 /* Build configuration list for PBXNativeTarget "IceClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48CF6AEB1C30EBD900D19387 /* Debug */,
+				48CF6AEC1C30EBD900D19387 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		48CF6AED1C30EBD900D19387 /* Build configuration list for PBXNativeTarget "IceClientUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48CF6AEE1C30EBD900D19387 /* Debug */,
+				48CF6AEF1C30EBD900D19387 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 48CF6AB21C30EBD900D19387 /* Project object */;
+}

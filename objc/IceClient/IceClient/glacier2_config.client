@@ -1,0 +1,14 @@
+Ice.Default.Router=DemoGlacier2/router:ssl -p 4063 -h 192.168.0.112 -t 10000:wss -p 4064 -h 192.168.0.112 -t 10000
+
+Ice.Trace.Locator=1
+
+Ice.ACM.Client.Timeout=0
+Ice.RetryIntervals=-1
+
+Ice.Plugin.IceSSL=IceSSL:createIceSSL
+IceSSL.DefaultDir=./
+IceSSL.CAs=ca.cer
+IceSSL.CertFile=client.p12
+IceSSL.Password=123456
+#IceSSL.Keychain=client.keychain
+#IceSSL.KeychainPassword=123456

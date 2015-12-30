@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+    	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+    	
+        <style>
+            #display{padding: 8px;display: none;}
+        </style>
+    </head>
+    <body>
+        <a id="loadBtn1" href="IceClientLocator.html">Locator加载</a>
+        <a id="loadBtn2" href="IceClientRouter.html">Router加载</a>
+        <script>
+            var isHttps = document.location.protocol.indexOf("https") != -1;
+            if(isHttps){
+                document.location="IceClientRouter.html";
+            }else{
+                document.location="IceClientLocator.html";
+            }
+        </script>
+    </body>
+</html>

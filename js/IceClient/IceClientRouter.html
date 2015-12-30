@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+    <head>
+    	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+    	
+        <style>
+            #display{padding: 8px;display: none;}
+        </style>
+    </head>
+    <body>
+    	<div id="load">loading...</div>
+        <div id="display"></div>
+
+        <script src="Ice.js"></script>
+        <script src="Glacier2.js"></script>
+        <script src="IceGrid.js"></script>
+        <script src="ticket.js"></script>
+        <script>
+            var communicator;
+            var router;
+            var orders;
+            var RouterPrx = Glacier2.RouterPrx;
+
+            var isHttps = document.location.protocol.indexOf("https") != -1;
+            if(isHttps){
+                loadOrderByRouter();
+            }else{
+                document.location="IceClientLocator.html";
+            }
+
+            //Router
+            function loadOrderByRouter(){
+            	Ice.Promise.try(function(){
+            		var iceData = new Ice.InitializationData();
+			        iceData.properties = Ice.createProperties();
+			        iceData.properties.setProperty("Ice.Default.Router", "DemoGlacier2/router:wss -p 4064 -h 192.168.0.112");
+			        iceData.properties.setProperty("Ice.RetryIntervals","-1");
+			        iceData.properties.setProperty("Ice.Trace.Network","0");
+			        iceData.properties.setProperty("IceSSL.VerifyPeer","0");
+			        iceData.properties.setProperty("IceSSL.Trace.Security","1");
+
+			        //iceData.properties.setProperty("IceSSL.CheckCertName","1");
+			        //iceData.properties.setProperty("IceSSL.UsePlatformCAs","1");
+			        communicator = Ice.initialize(iceData);
+
+			        return RouterPrx.checkedCast(communicator.getDefaultRouter());
+			    }).then(
+			        function(r) {
+			            router = r;
+			            return router.createSession("dly", "123456");
+			        }
+			    ).then(
+			        function(session) {
+			        	if(session == null){
+			        		console.log("session is null\n");
+			        	}
+			            var proxy = communicator.stringToProxy("TicketService");
+						return ticket.TicketServicePrx.checkedCast(proxy).then(
+							function (ticketServicePrx) {
+							    return ticketServicePrx.queryMyOrders("13631276694");
+							}
+						).then(
+						    function (result){
+						        orders = result;
+								var itemStr = "";
+								if(orders!=null && orders.length>0){
+								    for(var i=0; i<orders.length; i++){
+								        itemStr = itemStr+"［订单号］"+orders[i].orderNum+" ［订单时间］"+orders[i].orderDate+" ［价格］"+orders[i].amount+"<br/>";
+								    }
+								}
+								document.getElementById("display").innerHTML = itemStr;
+								document.getElementById("display").style.display="block";
+								document.getElementById("load").style.display="none";
+						    }
+						);
+			        }
+			    ).exception(
+			        function(ex) {
+			            if(ex instanceof Glacier2.PermissionDeniedException) {
+			                console.log("permission denied:\n" + ex.reason);
+			                return createSession();
+			            } else if(ex instanceof Glacier2.CannotCreateSessionException) {
+			                console.log("cannot create session:\n" + ex.reason);
+			                return createSession();
+			            } else {
+			                throw ex;
+			            }
+			        }
+				).finally(
+				    function() {
+				        if(communicator) {
+	                    	console.log("communicator.destroy()");
+				            return communicator.destroy();
+				        }
+				    }
+				);
+            }
+        </script>
+    </body>
+</html>

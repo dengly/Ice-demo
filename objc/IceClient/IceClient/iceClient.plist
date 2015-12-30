@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>idleTimeOutSeconds</key>
+	<integer>300</integer>
+	<key>--Ice.Default.Locator</key>
+	<string>IceGrid/Locator:tcp -h 192.168.0.112 -p 4061</string>
+</dict>
+</plist>
