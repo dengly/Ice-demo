@@ -39,6 +39,9 @@ Ice的js库可以到该连接下载[http://cdnjs.com/libraries/ice](#http://cdnj
 ## IceGrid+Glacier2使用SSL和WSS通讯
 我参考了[ice-demo](https://github.com/zeroc-ice/ice-demos)编写了客户端的代码。但是在使用SSL和WSS通讯时要生成相关证书，证书的生成请参考mymakecert.sh。
 
+## 结构图
+<img src="structure.png" style="max-width:100%"/>
+
 ## 请求说明
 客户端（Android和iOS）通过SSL和WSS向Glacier2发送请求，Glacier2在通过TCP向IceGrid获取相关结果后返回给客户端。
 
