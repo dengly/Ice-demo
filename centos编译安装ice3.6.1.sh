@@ -27,7 +27,6 @@ cd /root/downloads/jdk
 tar zxvf jdk-7u80-linux-x64.tar.gz
 mv jdk1.7.0_80 /usr/local/jdk7
 cp /root/downloads/ice/bcprov-jdk15on-153.jar /usr/local/jdk7/jre/lib/ext/
-chown -R root:root /usr/local/jdk7
 echo 'security.provider.x=org.bouncycastle.jce.provider.BouncyCastleProvider' >> /usr/local/jdk7/jre/lib/security/java.security
 ## 添加环境变量
 echo 'JAVA_HOME=/usr/local/jdk7' >> /etc/profile
@@ -84,18 +83,6 @@ cd mcpp-2.7.2
 make && make install
 
 
-# 安装 iconv
-cd /root/downloads/ice
-#wget http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.14.tar.gz
-#wget https://raw.githubusercontent.com/dengly/Ice-demo/master/iceFiles/libiconv-1.14.tar.gz
-#wget https://git.oschina.net/dengly/Ice-demo/raw/master/iceFiles/libiconv-1.14.tar.gz
-tar zxvf libiconv-1.14.tar.gz
-cd libiconv-1.14
-./configure --prefix=/usr/local
-make && make install
-ln -s /usr/local/lib/libiconv.so.2 /usr/lib/libiconv.so.2
-
-
 # 安装Berkeley DB
 cd /root/downloads/ice
 #wget http://download.oracle.com/otn/berkeley-db/db-5.3.28.tar.gz
@@ -116,6 +103,7 @@ echo 'CLASSPATH=$CLASSPATH:/usr/local/berkeleydb/lib64/db.jar' >> /etc/profile
 echo 'export LD_LIBRARY_PATH LD_RUN_PATH CLASSPATH' >> /etc/profile
 source /etc/profile
 
+ldconfig
 
 # 安装ice
 #编译c++
