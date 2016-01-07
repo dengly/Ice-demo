@@ -10,7 +10,7 @@ echo "------------ iceca init --------------"
 iceca init
 
 echo "------------ iceca create server and client --------------"
-iceca create --ip=192.168.0.112 --dns=192.168.0.112 server
+iceca create --ip=8.8.8.8 --dns=www.baidu.com server
 
 iceca create client
 
@@ -38,27 +38,27 @@ echo "------------ keytool -import --------------"
 keytool -import -v -trustcacerts -alias ca -file ./ca/ca.cer -storepass 123456 -keystore ./ca/server.jks
 keytool -import -v -trustcacerts -alias ca -file ./ca/ca.cer -storepass 123456 -keystore ./ca/client.jks
 
-keytool -import -v -trustcacerts -alias ca -file ./ca/ca.cer -storepass 123456 -keystore ./ca/server.bks -storetype bks -provider org.bouncycastle.jce.provider.BouncyCastleProvider -providerpath /path/bcprov-jdk15on-153.jar
-keytool -import -v -trustcacerts -alias ca -file ./ca/ca.cer -storepass 123456 -keystore ./ca/client.bks -storetype bks -provider org.bouncycastle.jce.provider.BouncyCastleProvider -providerpath /path/bcprov-jdk15on-153.jar
+keytool -import -v -trustcacerts -alias ca -file ./ca/ca.cer -storepass 123456 -keystore ./ca/server.bks -storetype bks -provider org.bouncycastle.jce.provider.BouncyCastleProvider -providerpath /usr/local/jdk7/jre/lib/ext/bcprov-jdk15on-153.jar
+keytool -import -v -trustcacerts -alias ca -file ./ca/ca.cer -storepass 123456 -keystore ./ca/client.bks -storetype bks -provider org.bouncycastle.jce.provider.BouncyCastleProvider -providerpath /usr/local/jdk7/jre/lib/ext/bcprov-jdk15on-153.jar
 
 echo "--------------------------"
 keytool -list -keystore ./ca/ca.p12 -storetype pkcs12 -v -storepass 123456
 echo "--------------------------"
 keytool -list -keystore ./ca/ca.jks -storepass 123456 -v
 echo "--------------------------"
-keytool -list -keystore ./ca/ca.bks -storetype bks -storepass 123456 -v -provider org.bouncycastle.jce.provider.BouncyCastleProvider -providerpath /path/bcprov-jdk15on-153.jar
+keytool -list -keystore ./ca/ca.bks -storetype bks -storepass 123456 -v -provider org.bouncycastle.jce.provider.BouncyCastleProvider -providerpath /usr/local/jdk7/jre/lib/ext/bcprov-jdk15on-153.jar
 echo "--------------------------"
 keytool -list -keystore ./ca/server.p12 -storetype pkcs12 -v -storepass 123456
 echo "--------------------------"
 keytool -list -keystore ./ca/server.jks -storepass 123456 -v
 echo "--------------------------"
-keytool -list -keystore ./ca/server.bks -storetype bks -storepass 123456 -v -provider org.bouncycastle.jce.provider.BouncyCastleProvider -providerpath /path/bcprov-jdk15on-153.jar
+keytool -list -keystore ./ca/server.bks -storetype bks -storepass 123456 -v -provider org.bouncycastle.jce.provider.BouncyCastleProvider -providerpath /usr/local/jdk7/jre/lib/ext/bcprov-jdk15on-153.jar
 echo "--------------------------"
 keytool -list -keystore ./ca/client.p12 -storetype pkcs12 -v -storepass 123456
 echo "--------------------------"
 keytool -list -keystore ./ca/client.jks -storepass 123456 -v
 echo "--------------------------"
-keytool -list -keystore ./ca/client.bks -storepass 123456 -v -storetype bks -provider org.bouncycastle.jce.provider.BouncyCastleProvider -providerpath /path/bcprov-jdk15on-153.jar
+keytool -list -keystore ./ca/client.bks -storepass 123456 -v -storetype bks -provider org.bouncycastle.jce.provider.BouncyCastleProvider -providerpath /usr/local/jdk7/jre/lib/ext/bcprov-jdk15on-153.jar
 
 echo ""
 echo ""
@@ -69,3 +69,4 @@ echo "纯Java客户端使用client.jks"
 echo "Android客户端使用client.bks"
 echo "iOS客户端使用ca.cer和client.p12，IceSSL.CAs=ca.cer，IceSSL.CertFile=client.p12"
 echo ""
+

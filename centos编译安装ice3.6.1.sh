@@ -27,6 +27,8 @@ cd /root/downloads/jdk
 tar zxvf jdk-7u80-linux-x64.tar.gz
 mv jdk1.7.0_80 /usr/local/jdk7
 cp /root/downloads/ice/bcprov-jdk15on-153.jar /usr/local/jdk7/jre/lib/ext/
+chown -R root:root /usr/local/jdk7
+echo 'security.provider.x=org.bouncycastle.jce.provider.BouncyCastleProvider' >> /usr/local/jdk7/jre/lib/security/java.security
 ## 添加环境变量
 echo 'JAVA_HOME=/usr/local/jdk7' >> /etc/profile
 echo 'JRE_HOME=$JAVA_HOME/jre' >> /etc/profile
@@ -39,6 +41,8 @@ source /etc/profile
 # 安装expat 2.0
 cd /root/downloads/ice
 #wget http://nchc.dl.sourceforge.net/project/expat/expat/2.1.0/expat-2.1.0.tar.gz
+#wget https://raw.githubusercontent.com/dengly/Ice-demo/master/iceFiles/expat-2.1.0.tar.gz
+#wget https://git.oschina.net/dengly/Ice-demo/raw/master/iceFiles/expat-2.1.0.tar.gz
 tar zxvf expat-2.1.0.tar.gz
 cd expat-2.1.0
 ./configure
@@ -51,6 +55,8 @@ echo 'LD_RUN_PATH=/usr/local/lib' >> /etc/profile
 # 安装openssl
 cd /root/downloads/ice
 #wget http://www.openssl.org/source/openssl-1.0.1g.tar.gz
+#wget https://raw.githubusercontent.com/dengly/Ice-demo/master/iceFiles/openssl-1.0.1g.tar.gz
+#wget https://git.oschina.net/dengly/Ice-demo/raw/master/iceFiles/openssl-1.0.1g.tar.gz
 tar zxvf openssl-1.0.1g.tar.gz
 cd openssl-1.0.1g
 ./config --prefix=/usr/local/openssl
@@ -60,6 +66,8 @@ make && make install
 # 安装bzip2
 cd /root/downloads/ice
 #wget http://www.bzip.org/1.0.6/bzip2-1.0.6.tar.gz
+#wget https://raw.githubusercontent.com/dengly/Ice-demo/master/iceFiles/bzip2-1.0.6.tar.gz
+#wget https://git.oschina.net/dengly/Ice-demo/raw/master/iceFiles/bzip2-1.0.6.tar.gz
 tar zxvf bzip2-1.0.6.tar.gz
 cd bzip2-1.0.6
 make && make install
@@ -68,6 +76,8 @@ make && make install
 # 安装mcpp
 cd /root/downloads/ice
 #wget http://jaist.dl.sourceforge.net/project/mcpp/mcpp/V.2.7.2/mcpp-2.7.2.tar.gz
+#wget https://raw.githubusercontent.com/dengly/Ice-demo/master/iceFiles/mcpp-2.7.2.tar.gz
+#wget https://git.oschina.net/dengly/Ice-demo/raw/master/iceFiles/mcpp-2.7.2.tar.gz
 tar zxvf mcpp-2.7.2.tar.gz
 cd mcpp-2.7.2
 ./configure CFLAGS=-fPIC --enable-mcpplib --disable-shared 
@@ -77,6 +87,8 @@ make && make install
 # 安装 iconv
 cd /root/downloads/ice
 #wget http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.14.tar.gz
+#wget https://raw.githubusercontent.com/dengly/Ice-demo/master/iceFiles/libiconv-1.14.tar.gz
+#wget https://git.oschina.net/dengly/Ice-demo/raw/master/iceFiles/libiconv-1.14.tar.gz
 tar zxvf libiconv-1.14.tar.gz
 cd libiconv-1.14
 ./configure --prefix=/usr/local
@@ -87,6 +99,8 @@ ln -s /usr/local/lib/libiconv.so.2 /usr/lib/libiconv.so.2
 # 安装Berkeley DB
 cd /root/downloads/ice
 #wget http://download.oracle.com/otn/berkeley-db/db-5.3.28.tar.gz
+#wget https://raw.githubusercontent.com/dengly/Ice-demo/master/iceFiles/berkeley-db53-5.3.28.NC.brew.tar.gz
+#wget https://git.oschina.net/dengly/Ice-demo/raw/master/iceFiles/berkeley-db53-5.3.28.NC.brew.tar.gz
 tar zxvf berkeley-db53-5.3.28.NC.brew.tar.gz
 cd db-5.3.28.NC/build_unix/
 ../dist/configure --prefix=/usr/local/berkeleydb --enable-cxx --enable-java
@@ -107,6 +121,8 @@ source /etc/profile
 #编译c++
 cd /root/downloads/ice
 #wget https://github.com/zeroc-ice/ice/archive/ice-3.6.1.tar.gz
+#wget https://raw.githubusercontent.com/dengly/Ice-demo/master/iceFiles/ice-3.6.1.tar.gz
+#wget https://git.oschina.net/dengly/Ice-demo/raw/master/iceFiles/ice-3.6.1.tar.gz
 tar zxvf ice-3.6.1.tar.gz
 cd ice-3.6.1/cpp
 make
