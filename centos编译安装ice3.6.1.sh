@@ -97,7 +97,7 @@ cp -rf /usr/local/berkeleydb/lib /usr/local/berkeleydb/lib64
 #ldconfig
 #cd ../..
 ## 添加环境变量
-echo 'LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/berkeleydb/lib:/usr/local/berkeleydb/lib64:/usr/lib64' >> /etc/profile
+echo 'LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/berkeleydb:/usr/lib64' >> /etc/profile
 echo 'LD_RUN_PATH=$LD_RUN_PATH:/usr/local/berkeleydb/bin' >> /etc/profile
 echo 'CLASSPATH=$CLASSPATH:/usr/local/berkeleydb/lib64/db.jar' >> /etc/profile
 echo 'export LD_LIBRARY_PATH LD_RUN_PATH CLASSPATH' >> /etc/profile
@@ -122,6 +122,10 @@ echo 'PATH=$PATH:$ICE_HOME/bin' >> /etc/profile
 echo 'export PATH ICE_HOME' >> /etc/profile
 source /etc/profile
 ./gradlew build
+./gradlew install
+echo 'CLASSPATH=$CLASSPATH:/usr/local/Ice-3.6.1/share/java/' >> /etc/profile
+echo 'export CLASSPATH' >> /etc/profile
+source /etc/profile
 
 
 # 安装iceca
