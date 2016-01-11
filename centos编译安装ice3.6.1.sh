@@ -20,6 +20,9 @@ scp root@10.168.125.178:/root/downloads/ice/ice-3.6.1.tar.gz /root/downloads/ice
 
 yum -y install unzip zip bzip2 bzip2-devel tar gcc g++ automake autoconf libtool make expat openssl openssl-devel libffi-devel libiconv python-devel mcpp
 
+#cd /root/downloads/ice
+#wget https://git.oschina.net/dengly/Ice-demo/raw/master/iceFiles/bcprov-jdk15on-153.rename
+#mv bcprov-jdk15on-153.rename bcprov-jdk15on-153.jar
 
 # 安装jdk
 cd /root/downloads/jdk
