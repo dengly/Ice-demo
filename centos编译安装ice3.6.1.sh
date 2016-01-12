@@ -139,7 +139,7 @@ easy_install zeroc-icecertutils
 #将bcprov-jdk15on-153.jar复制到/usr/local/jdk7/jre/lib/ext下
 #配置环境变量ICE_CA_HOME
 mkdir -p /home/Ice/ca
-echo 'ICE_CA_HOME=/home/Ice/ca' >> /etc/ld.so.conf
+echo 'ICE_CA_HOME=/home/Ice/ca' >> /etc/profile
 echo 'export ICE_CA_HOME' >> /etc/profile
 source /etc/profile
 
