@@ -18,7 +18,7 @@ scp root@10.168.125.178:/root/downloads/ice/mcpp-2.7.2.tar.gz /root/downloads/ic
 scp root@10.168.125.178:/root/downloads/ice/openssl-1.0.1g.tar.gz /root/downloads/ice/
 scp root@10.168.125.178:/root/downloads/ice/ice-3.6.1.tar.gz /root/downloads/ice/
 
-yum -y install unzip zip bzip2 bzip2-devel tar gcc g++ automake autoconf libtool make expat openssl openssl-devel libffi-devel libiconv python-devel mcpp
+yum -y install unzip zip bzip2 bzip2-devel tar gcc g++ gcc-c++ automake autoconf libtool make expat openssl openssl-devel libffi-devel libiconv python-devel mcpp
 
 #cd /root/downloads/ice
 #wget https://git.oschina.net/dengly/Ice-demo/raw/master/iceFiles/bcprov-jdk15on-153.rename
