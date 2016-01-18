@@ -36,6 +36,7 @@ stop_gridregistry(){
 }
 restart_gridregistry(){
     stop_gridregistry
+    sleep 2
     start_gridregistry
 }
 
@@ -55,8 +56,9 @@ stop_gridnode(){
     fi
 }
 restart_gridnode(){
-    start_gridnode
     stop_gridnode
+    sleep 2
+    start_gridnode
 }
 
 #glacier2
@@ -78,6 +80,7 @@ stop_glacier2(){
 
 restart_glacier2(){
     stop_glacier2
+    sleep 2
     start_glacier2
 }
 
