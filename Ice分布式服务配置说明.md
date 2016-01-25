@@ -20,6 +20,7 @@
 3. 服务器A上通过管理端添加application
 4. 启动客户端访问
 
+
 # node的分布式配置说明
 ## node说明
 * 服务器A，服务器B
@@ -39,6 +40,28 @@
 2. 启动服务器B的node
 3. 服务器A上通过管理端添加application
 4. 启动客户端访问
+
+
+# IceGlacier2多服务器部署
+## 说明
+* 服务器A，服务器B
+* 服务器A上部署主Registry、Glacier2_1
+* 服务器B上部署从Registry、Glacier2_1
+
+## 证书说明注意
+* 生成证书时不指定server的ip，只指定域名
+* 所有的部署Glacier2都使用一样的证书
+
+## 配置说明
+* Glacier2_1的Ice.Default.Locator指服务器A和服务器B
+* Glacier2_1的配置证书，所有的部署Glacier2都使用一样的证书
+* Glacier2_2的Ice.Default.Locator指服务器A和服务器B
+* Glacier2_2的配置证书，所有的部署Glacier2都使用一样的证书
+* 客户端的Glacier2指服务器A和服务器B的Glacier2
+
+## 作用
+配置多个Glacier2主要起到分流作用。
+
 
 # IcePatch2和IceGrid集成
 ## 说明
@@ -79,6 +102,7 @@
 				</properties>
 			</server>
 		</server-template>
+		<distrib/>
 		<node name="node1">
 			<server-instance template="IcePatch2ServerTemplate" directory="/home/Ice/patch2/server" endpoints="tcp -p 8000" />
 			<server-instance template="IcePatch2ClientTemplate" directory="/home/Ice/patch2/client" nodeName="patch2Client_1" />

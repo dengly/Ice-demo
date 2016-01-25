@@ -133,7 +133,9 @@ source /etc/profile
 
 # 安装iceca
 cd /root/downloads/ice
-wget https://bootstrap.pypa.io/ez_setup.py -O - | python
+#wget https://bootstrap.pypa.io/ez_setup.py -O - | python
+wget --no-check-certificate https://bootstrap.pypa.io/ez_setup.py
+python ez_setup.py --insecure
 easy_install pycrypto
 easy_install zeroc-icecertutils
 #将bcprov-jdk15on-153.jar复制到/usr/local/jdk7/jre/lib/ext下
