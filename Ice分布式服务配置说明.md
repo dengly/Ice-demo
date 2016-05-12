@@ -46,7 +46,7 @@
 ## 说明
 * 服务器A，服务器B
 * 服务器A上部署主Registry、Glacier2_1
-* 服务器B上部署从Registry、Glacier2_1
+* 服务器B上部署从Registry、Glacier2_2
 
 ## 证书说明注意
 * 生成证书时不指定server的ip，只指定域名
