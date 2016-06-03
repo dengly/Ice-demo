@@ -16,7 +16,7 @@ scp root@10.168.125.178:/root/downloads/ice/icecertutils.zip /root/downloads/ice
 scp root@10.168.125.178:/root/downloads/ice/libiconv-1.14.tar.gz /root/downloads/ice/
 scp root@10.168.125.178:/root/downloads/ice/mcpp-2.7.2.tar.gz /root/downloads/ice/
 scp root@10.168.125.178:/root/downloads/ice/openssl-1.0.1g.tar.gz /root/downloads/ice/
-scp root@10.168.125.178:/root/downloads/ice/ice-3.6.1.tar.gz /root/downloads/ice/
+scp root@10.168.125.178:/root/downloads/ice/ice-3.6.2.tar.gz /root/downloads/ice/
 
 yum -y install unzip zip bzip2 bzip2-devel tar gcc g++ gcc-c++ automake autoconf libtool make expat openssl openssl-devel libffi-devel libiconv python-devel mcpp
 
@@ -38,6 +38,13 @@ echo 'CLASSPATH=.:$JRE_HOME/lib/jsse.jar:$JRE_HOME/lib/jfxrt.jar:$JAVA_HOME/lib/
 echo 'PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin' >> /etc/profile
 echo 'export JAVA_HOME JRE_HOME CLASSPATH PATH' >> /etc/profile
 source /etc/profile
+
+# 安装libiconv
+#cd /root/downloads/ice
+#tar zxvf libiconv-1.14.tar.gz
+#cd libiconv-1.14
+#./configure --prefix=/usr/local
+#make && make install
 
 
 # 安装expat 2.0
@@ -111,22 +118,22 @@ ldconfig
 # 安装ice
 #编译c++
 cd /root/downloads/ice
-#wget https://github.com/zeroc-ice/ice/archive/ice-3.6.1.tar.gz
-#wget https://raw.githubusercontent.com/dengly/Ice-demo/master/iceFiles/ice-3.6.1.tar.gz
-#wget https://git.oschina.net/dengly/Ice-demo/raw/master/iceFiles/ice-3.6.1.tar.gz
-tar zxvf ice-3.6.1.tar.gz
-cd ice-3.6.1/cpp
+#wget https://github.com/zeroc-ice/ice/archive/ice-3.6.2.tar.gz
+#wget https://raw.githubusercontent.com/dengly/Ice-demo/master/iceFiles/ice-3.6.2.tar.gz
+#wget https://git.oschina.net/dengly/Ice-demo/raw/master/iceFiles/ice-3.6.2.tar.gz
+tar zxvf ice-3.6.2.tar.gz
+cd ice-3.6.2/cpp
 make
 make install
 #编译java
 cd ../java
-echo 'ICE_HOME=/usr/local/Ice-3.6.1' >> /etc/profile
+echo 'ICE_HOME=/usr/local/Ice-3.6.2' >> /etc/profile
 echo 'PATH=$PATH:$ICE_HOME/bin' >> /etc/profile
 echo 'export PATH ICE_HOME' >> /etc/profile
 source /etc/profile
 ./gradlew build
 ./gradlew install
-echo 'CLASSPATH=$CLASSPATH:/usr/local/Ice-3.6.1/share/java/' >> /etc/profile
+echo 'CLASSPATH=$CLASSPATH:/usr/local/Ice-3.6.2/share/java/' >> /etc/profile
 echo 'export CLASSPATH' >> /etc/profile
 source /etc/profile
 
