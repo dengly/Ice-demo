@@ -8,8 +8,8 @@
 应用代码app部署到服务器A上
 
 ## 配置说明
-1. 服务器A上的主Registry配置上添加Ice.ProgramName=Master，将Ice.Default.Locator指向服务器B和本机
-2. 服务器B上的从Registry配置上添加Ice.ProgramName=Replica1、IceGrid.Registry.ReplicaName=Replica1，将Ice.Default.Locator指向服务器A和本机
+1. 服务器A上的主Registry配置上添加Ice.ProgramName=Master，注释掉Ice.Admin.ServerId和Ice.Admin.InstanceName，将Ice.Default.Locator指向服务器B和本机
+2. 服务器B上的从Registry配置上添加Ice.ProgramName=Replica1、IceGrid.Registry.ReplicaName=Replica1，注释掉Ice.Admin.ServerId和Ice.Admin.InstanceName，将Ice.Default.Locator指向服务器A和本机
 3. 服务器A的node1上Ice.Default.Locator指服务器A和服务器B
 4. 在服务器A的应用代码app的grid上配置node1
 5. 客户端的Ice.Default.Locator指服务器A和服务器B，或Glaciter2的Ice.Default.Locator指服务器A和服务器B

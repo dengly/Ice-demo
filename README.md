@@ -20,6 +20,11 @@
 * 服务器：CentOS 6.5 64位
 * JDK：[jdk1.7.0_79](http://download.oracle.com/otn/java/jdk/7u79-b15/jdk-7u79-linux-x64.tar.gz)
 * 个人的例子是参考[《ZeroC Ice权威指南》](http://item.jd.com/10026458225.html)和[ice-demo](https://github.com/zeroc-ice/ice-demos)
+* Ice 编译依赖 [iceFiles](./iceFiles)
+* Java 服务端 [iceTicketProject](./java/iceTicketProject)
+* Android 客户端 [android/IceClient](./android/IceClient)
+* JavaScript 客户端 [js/IceClient](./js/IceClient)
+* iOS 客户端 [objc/IceClient](./objc/IceClient)
 
 ========
 
