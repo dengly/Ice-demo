@@ -8,6 +8,7 @@
 创建人 | 邓燎燕
 版本号 | 1.0
 修改时间 | 修改人 | 修改内容
+2017-03－09 | 邓燎燕 | 添加keystore-explorer地址
 2016-01－18 | 邓燎燕 | 修复IceApp脚本bug，修改了Ice分布式服务配置说明，添加了IceGrid和IcePatch2的集成，也可以参考[http://blog.csdn.net/pj81102/article/details/5910545](http://blog.csdn.net/pj81102/article/details/5910545)
 2016-01－11 | 邓燎燕 | 添加bcprov-jdk15on-153，修改了安装脚本
 2016-01－11 | 邓燎燕 | 添加Ice分布式服务配置说明
@@ -16,7 +17,7 @@
 ###### 说明
 * 本文的所有研究是基于[Ice 3.6.1](https://github.com/zeroc-ice/ice/tree/3.6.1)
 * iOS端的开发依赖包[icetouch](https://github.com/zeroc-ice/icetouch)
-* 在Ice 3.6.1里不再有iceca这个证书生成工具，已经迁移到[icecertutils](https://github.com/zeroc-ice/icecertutils)
+* 在Ice 3.6.1里不再有iceca这个证书生成工具，已经迁移到[icecertutils](https://github.com/zeroc-ice/icecertutils)，另发现一个比较好用的证书工具[keystore-explorer](https://github.com/kaikramer/keystore-explorer/tree/master/kse)
 * 服务器：CentOS 6.5 64位
 * JDK：[jdk1.7.0_79](http://download.oracle.com/otn/java/jdk/7u79-b15/jdk-7u79-linux-x64.tar.gz)
 * 个人的例子是参考[《ZeroC Ice权威指南》](http://item.jd.com/10026458225.html)和[ice-demo](https://github.com/zeroc-ice/ice-demos)
