@@ -8,6 +8,7 @@
 创建人 | 邓燎燕
 版本号 | 1.0
 修改时间 | 修改人 | 修改内容
+2017-04-13 | 邓燎燕 | 添加[Centos安装Ice的PHP.md](./Centos安装Ice的PHP.md)
 2017-03－09 | 邓燎燕 | 添加keystore-explorer地址
 2016-01－18 | 邓燎燕 | 修复IceApp脚本bug，修改了Ice分布式服务配置说明，添加了IceGrid和IcePatch2的集成，也可以参考[http://blog.csdn.net/pj81102/article/details/5910545](http://blog.csdn.net/pj81102/article/details/5910545)
 2016-01－11 | 邓燎燕 | 添加bcprov-jdk15on-153，修改了安装脚本
