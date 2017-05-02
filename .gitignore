@@ -16,6 +16,11 @@ target/*
 android/IceClient/bin/*
 android/IceClient/gen/*
 
+android/IceClient2/.gradle/*
+android/IceClient2/app/build/*
+android/IceClient2/app/libs/*
+android/IceClient2/build/*
+
 # Xcode
 *.xcuserstate
 */build/*
