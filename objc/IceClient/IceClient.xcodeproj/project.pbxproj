@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48C6AEEC1EB884C60014A563 /* IceMobileKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C6AEEA1EB884C60014A563 /* IceMobileKit.m */; };
 		48CF6ABF1C30EBD900D19387 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CF6ABE1C30EBD900D19387 /* main.m */; };
 		48CF6AC21C30EBD900D19387 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CF6AC11C30EBD900D19387 /* AppDelegate.m */; };
 		48CF6AC51C30EBD900D19387 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CF6AC41C30EBD900D19387 /* ViewController.m */; };
@@ -42,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		48C6AEE91EB884C60014A563 /* IceMobileKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IceMobileKit.h; sourceTree = "<group>"; };
+		48C6AEEA1EB884C60014A563 /* IceMobileKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IceMobileKit.m; sourceTree = "<group>"; };
+		48C6AEEB1EB884C60014A563 /* IceMobileSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IceMobileSDK.h; sourceTree = "<group>"; };
 		48CF6ABA1C30EBD900D19387 /* IceClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IceClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48CF6ABE1C30EBD900D19387 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		48CF6AC01C30EBD900D19387 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -117,6 +121,9 @@
 		48CF6ABC1C30EBD900D19387 /* IceClient */ = {
 			isa = PBXGroup;
 			children = (
+				48C6AEE91EB884C60014A563 /* IceMobileKit.h */,
+				48C6AEEA1EB884C60014A563 /* IceMobileKit.m */,
+				48C6AEEB1EB884C60014A563 /* IceMobileSDK.h */,
 				48CF6AF01C30ECFA00D19387 /* ca.cer */,
 				48CF6AF11C30ECFA00D19387 /* client.p12 */,
 				48CF6AF21C30ECFA00D19387 /* glacier2_config.client */,
@@ -310,6 +317,7 @@
 				48CF6AFF1C30ECFA00D19387 /* IceClientUtil.m in Sources */,
 				48CF6AC51C30EBD900D19387 /* ViewController.m in Sources */,
 				48CF6AC21C30EBD900D19387 /* AppDelegate.m in Sources */,
+				48C6AEEC1EB884C60014A563 /* IceMobileKit.m in Sources */,
 				48CF6B001C30ECFA00D19387 /* IceGlacier2Util.m in Sources */,
 				48CF6ABF1C30EBD900D19387 /* main.m in Sources */,
 				48CF6B011C30ECFA00D19387 /* ticket.ice in Sources */,
@@ -542,6 +550,7 @@
 				48CF6AE91C30EBD900D19387 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		48CF6AEA1C30EBD900D19387 /* Build configuration list for PBXNativeTarget "IceClientTests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +559,7 @@
 				48CF6AEC1C30EBD900D19387 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		48CF6AED1C30EBD900D19387 /* Build configuration list for PBXNativeTarget "IceClientUITests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +568,7 @@
 				48CF6AEF1C30EBD900D19387 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
